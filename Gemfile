@@ -276,4 +276,4 @@ gem "cgi", ">= 0.3.6", require: false
 
 gem "tzinfo-data"
 
-gem "ddtrace", path: "../dd-trace-rb", require: 'ddtrace/auto_instrument'
+gem "ddtrace", path: "../dd-trace-rb"
