@@ -24,7 +24,7 @@ unless ENV["NO_UPDATE"]
   run_or_fail("git fetch")
 
   checkout = ENV["COMMIT_HASH"] || "origin/tests-passed"
-  run_or_fail("LEFTHOOK=0 git checkout #{checkout}")
+  run_or_fail("git checkout #{checkout}")
 
   run_or_fail("bundle")
 end

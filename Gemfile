@@ -201,12 +201,6 @@ gem "lru_redux"
 
 gem "htmlentities", require: false
 
-# IMPORTANT: mini profiler monkey patches, so it better be required last
-#  If you want to amend mini profiler to do the monkey patches in the railties
-#  we are open to it. by deferring require to the initializer we can configure discourse installs without it
-
-gem "rack-mini-profiler", require: ["enable_rails_patches"]
-
 gem "unicorn", require: false, platform: :ruby
 gem "puma", require: false
 gem "rbtrace", require: false, platform: :mri

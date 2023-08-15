@@ -50,7 +50,7 @@ end
 
 def git(*args, allow_failure: false, silent: false)
   puts "> git #{args.inspect}" unless silent
-  stdout, stderr, status = Open3.capture3({ "LEFTHOOK" => "0" }, "git", *args)
+  stdout, stderr, status = Open3.capture3({ }, "git", *args)
   if !status.success? && !allow_failure
     raise "Command failed: git #{args.inspect}\n#{stdout.indent(2)}\n#{stderr.indent(2)}"
   end
@@ -103,7 +103,7 @@ end
 def make_pr(base:, branch:, title:)
   params = { expand: 1, title: title, body: <<~MD }
       > :warning: This PR should not be merged via the GitHub web interface
-      > 
+      >
       > It should only be merged (via fast-forward) using the associated `bin/rake version_bump:*` task.
     MD
 
