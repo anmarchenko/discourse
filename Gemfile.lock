@@ -14,6 +14,15 @@ GIT
     shoulda-matchers (5.3.0)
       activesupport (>= 5.2.0)
 
+PATH
+  remote: ../dd-trace-rb
+  specs:
+    ddtrace (1.13.1)
+      debase-ruby_core_source (= 3.2.1)
+      libdatadog (~> 3.0.0.1.0)
+      libddwaf (~> 1.9.0.0.0)
+      msgpack
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -131,6 +140,7 @@ GEM
       sprockets-rails
       tilt
     date (3.3.3)
+    debase-ruby_core_source (3.2.1)
     debug_inspector (1.1.0)
     diff-lcs (1.5.0)
     diffy (3.4.2)
@@ -200,6 +210,19 @@ GEM
     jwt (2.7.1)
     kgio (2.11.4)
     language_server-protocol (3.17.0.3)
+    libdatadog (3.0.0.1.0)
+    libdatadog (3.0.0.1.0-aarch64-linux)
+    libdatadog (3.0.0.1.0-x86_64-linux)
+    libddwaf (1.9.0.0.1)
+      ffi (~> 1.0)
+    libddwaf (1.9.0.0.1-aarch64-linux)
+      ffi (~> 1.0)
+    libddwaf (1.9.0.0.1-arm64-darwin)
+      ffi (~> 1.0)
+    libddwaf (1.9.0.0.1-x86_64-darwin)
+      ffi (~> 1.0)
+    libddwaf (1.9.0.0.1-x86_64-linux)
+      ffi (~> 1.0)
     libv8-node (18.16.0.0)
     libv8-node (18.16.0.0-aarch64-linux)
     libv8-node (18.16.0.0-arm64-darwin)
@@ -569,6 +592,7 @@ DEPENDENCIES
   css_parser
   dartsass-ruby
   dartsass-sprockets
+  ddtrace!
   diffy
   digest
   discourse-fonts
